@@ -12,9 +12,12 @@ body {
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   color: @textColor;
-  background-color: @bodyBackground;
+  background: @bodyBackground url(../../img/topbg.jpg) repeat-x 0 0;
 }
 
+.container, .container-fluid {
+  .clearfix ();
+}
 
 // Links
 // -----

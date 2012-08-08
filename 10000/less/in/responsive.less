@@ -252,10 +252,10 @@
   .navbar .nav > li {
     float: none;
   }
-  .navbar .nav > li > a {
+  .navbar .nav li a {
     margin-bottom: 2px;
   }
-  .navbar .nav > .divider-vertical {
+  .navbar .nav .divider-vertical {
     display: none;
   }
   .navbar .nav .nav-header {
@@ -263,7 +263,7 @@
     text-shadow: none;
   }
   // Nav and dropdown links in navbar
-  .navbar .nav > li > a,
+  .navbar .nav li a,
   .navbar .dropdown-menu a {
     padding: 6px 15px;
     font-weight: bold;
@@ -273,7 +273,7 @@
   .navbar .dropdown-menu li + li a {
     margin-bottom: 2px;
   }
-  .navbar .nav > li > a:hover,
+  .navbar .nav li a:hover,
   .navbar .dropdown-menu a:hover {
     background-color: @navbarBackground;
   }
@@ -352,19 +352,19 @@
 @media (min-width: 1200px) {
 
   // Fixed grid
-  #grid > .core(70px, 30px);
+  #grid .core(70px, 30px);
 
   // Fluid grid
   #grid > .fluid(5.982905983%, 2.564102564%);
 
   // Input grid
-  #grid > .input(70px, 30px);
+  #grid .input(70px, 30px);
 
   // Thumbnails
   .thumbnails {
     margin-left: -30px;
   }
-  .thumbnails > li {
+  .thumbnails li {
     margin-left: 30px;
   }
 

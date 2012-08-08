@@ -18,7 +18,7 @@
 .navbar-inner {
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  #gradient .vertical(@navbarBackgroundHighlight, @navbarBackground);
   .border-radius(4px);
   @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   .box-shadow(@shadow);
@@ -129,7 +129,7 @@
   margin-bottom: 0;
   .search-query {
     padding: 4px 9px;
-    #font > .sans-serif(13px, normal, 1);
+    #font .sans-serif(13px, normal, 1);
     color: @white;
     background-color: @navbarSearchBackground;
     border: 1px solid @navbarSearchBorder;
@@ -182,7 +182,7 @@
 
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  #grid > .core > .span(@gridColumns);
+  #grid .core .span(@gridColumns);
 }
 
 // Fixed to top
@@ -210,13 +210,13 @@
 .navbar .nav.pull-right {
   float: right; // redeclare due to specificity
 }
-.navbar .nav > li {
+.navbar .nav li {
   display: block;
   float: left;
 }
 
 // Links
-.navbar .nav > li > a {
+.navbar .nav li a {
   float: none;
   padding: 10px 10px 11px;
   line-height: 19px;
@@ -225,15 +225,15 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
 // Hover
-.navbar .nav > li > a:hover {
+.navbar .nav li a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
   color: @navbarLinkColorHover;
   text-decoration: none;
 }
 
 // Active nav items
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
+.navbar .nav .active a,
+.navbar .nav .active a:hover {
   color: @navbarLinkColorActive;
   text-decoration: none;
   background-color: @navbarLinkBackgroundActive;
@@ -313,14 +313,14 @@
 }
 
 // Remove background color from open dropdown
-.navbar .nav .open > .dropdown-toggle,
-.navbar .nav .active > .dropdown-toggle,
-.navbar .nav .open.active > .dropdown-toggle {
+.navbar .nav .open .dropdown-toggle,
+.navbar .nav .active .dropdown-toggle,
+.navbar .nav .open.active .dropdown-toggle {
   background-color: transparent;
 }
 
 // Dropdown link on hover
-.navbar .nav .active > .dropdown-toggle:hover {
+.navbar .nav .active .dropdown-toggle:hover {
   color: @white;
 }
 
