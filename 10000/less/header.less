@@ -1,6 +1,39 @@
+@import "global.less";
 
 .header{
 	.clearfix ();
 	min-width: 980px;
 }
-
+.logo{
+	width: 175px;
+	height: 85px;
+//	text-indent: -9999px;
+	overflow: hidden;
+	margin:5px 25px 5px 0;
+	float: left;
+}
+.subnav{
+	float: left;
+	background: @green url(../img/navbg.gif) 0px 0px repeat-x;
+	border-radius:4px;
+	border:1px solid #E5E5E5;
+	height: 44px;
+	margin-top:30px;
+	width: 774px;
+	.nav{
+		margin:0;
+		a{
+			border-left: 1px solid #83b429;
+		    border-radius: 0 0 0 0;
+		    border-right: 1px solid #b2d85e;
+		    padding:15px 24px;
+		    margin:0;
+		    font-size: 16px;
+		    .font-yab();
+		    color: @white;
+			&.last{
+				border:0 none;
+			}
+		}
+	}
+}
