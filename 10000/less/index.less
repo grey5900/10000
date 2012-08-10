@@ -1,1 +1,55 @@
+@import "main.less";
 
+.content{
+	width:100%;
+	.clearfix();
+}
+.row{
+	margin:20px 0;
+	.ad-img{
+		float: left;
+		width: 400px;
+		a{
+			img{
+				width: 400px;
+				height: 280px;
+				border:0;
+			}
+		}
+	}
+	.tab{
+		float: left;
+		width: 300px;
+		margin:0 10px;
+		.hd{
+			
+		}
+		.nav-tabs{
+			border-bottom:2px solid @green;
+			a{
+			
+				font-size: 14px;
+				.font-yab();
+				&:hover{
+					margin:0;
+					color: #fff;
+					border:0 none;
+				}
+			}
+			.active{
+				a{
+					background: @green url() 0px 0px no-repeat;
+					color: #fff;
+					&:hover{
+						background: @green url() 0px 0px no-repeat;
+						color: #fff;
+					}
+				}
+			}
+		}		
+	}
+	.rank{
+		float: left;
+		width: 250px;
+	}
+}
