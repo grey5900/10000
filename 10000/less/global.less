@@ -36,10 +36,32 @@
  
 .font-yab{font-family: "Microsoft YaHei",@baseFontFamily;}
 
-
 /*
  * line*/
- 
+.dotted-line{
+	background:url("../img/dotted.png") repeat-x scroll 0 0 transparent;	
+}
 .dotted-solid-line{
 	border-bottom:1px solid #e8ecde;
+}
+
+/*
+ * link*/
+.gray-link{
+	color: @grayDarker;
+	&:hover{
+		color: @blue;
+	}
+	&:visited{
+		color: @grayDark;
+	}
+}
+.blue-link{
+	color: #0f92a1;
+	&:hover{
+		color: darken(#0f92a1, 15%);
+	}
+	&:visited{
+		color: @grayDark;
+	}
 }
