@@ -2,10 +2,13 @@
 
 .row{
 	width: 100%;
-	margin:0;
+	margin:20px 0;
 	.span3{
 		width: 230px;
 		margin:0px;
+	}
+	.span9{
+		width: 730px;
 	}
 }
 .sidebar-nav{
@@ -52,5 +55,42 @@
 			}
 		}
 	}
-
+}
+.content-right{
+	.ad-img{
+		width: 730px;
+		img{
+			width: 730px;
+		}
+	}
+	.accont-login{
+		width: 728px;
+		border:1px solid #cfcfcf;
+		.accont-hd{
+			height: 37px;
+			width: 728px;
+			//margin: 0 1px;
+			background: url(../img/bg_rigtitle.jpg) repeat-x;
+			.accont-comtag{
+				width: 200px;
+				height: 30px;
+				line-height: 30px;
+				background:url(../img/bg_modeltitle.gif) no-repeat;
+				margin:0 auto;
+				text-align: center;
+				h3{
+					color: @white;
+					font-weight: bold;
+				}
+			}
+		}
+		.accont-bd{
+			width: 728px;
+			background: #fff;
+			padding-top:30px;
+			.control-group,.btn{
+				margin-left:100px;
+			}
+		}
+	}
 }	
