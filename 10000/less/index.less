@@ -24,44 +24,33 @@
 	margin:0 10px;
 	border-bottom:3px solid @orange;
 	.hd{
-		height: 30px;
-		line-height: 30px;
-	}
-	.bd{
-		height: 220px;
-		padding:14px 9px;
-		overflow:hidden;
-	}
-	.tab-holder{
-		height:30px;
-		line-height: 30px;
-		border-bottom:1px @green solid; 
-		background:#eee;
+		height: 36px;
+		line-height: 36px;
+		width: 298px;
+		border-right:1px solid #ddd;
+		border-left:1px solid #ddd;
 		li{
-			float:left; 
-			width:99px; 
+			width:99px;
 			margin:0 0 -1px 0; 
-			border-left:1px #f4f4f4 solid; 
-			border-right:1px #f4f4f4 solid; 
-			text-align:center; 
+			text-align: center;
 			font-size:14px; 
 			font-weight:bold;
-			line-height: 30px;
 			a{
-				color: @gray;
+				font-size: 12px;
 			}
 		}
-		li.current{
-			position:relative; 
-			height:31px; 
-			border-color:#cecece;
-			background:#f4f4f4;
-		}
-		li.notice{
-			border-left:1px #f4f4f4 solid;
-		}
 	}
-	.tab-panel{
+	.bd{
+		height: 215px;
+		padding:13px 8px;
+		overflow:hidden;
+		background: #fff;
+		border-width:1px;
+		border-color:transparent #ddd transparent #ddd;
+		border-style:solid;
+		display: block;
+	}
+	.tab-content{
 		li{
 			height: 21px;
 			line-height: 18px;
@@ -69,7 +58,7 @@
 			
 			a{
 				float: left;
-				width: 215px;	
+				width: 218px;	
 				overflow:hidden;
 				height: 18px;
 				color:	@gray;
@@ -86,21 +75,25 @@
 }
 #rank{
 	float: left;
-	width: 250px;
+	width: 252px;
 	border-bottom:3px solid @blueDark;
 	.hd{
 		background: #eee url() 0px 0px no-repeat;
 		width: 250px;
-		height: 30px;
-		line-height: 30px;
+		height: 36px;
+		line-height: 36px;
 		border-bottom:1px @green solid; 
+		border-width:1px;
+		border-style:solid;
+		border-color:#ddd #ddd @green #ddd;
 		i{
 			float: left;
-			margin:0 10px;
+			margin:5px 10px 0;
 		}
 		h3{
 			float: left;
 			margin-left:25px;
+			line-height: 36px;
 		}
 		span{
 			float: right;
@@ -114,9 +107,13 @@
 	}
 }
 .rank-list{	
-	height: 220px;
-	padding:14px 9px;
+	height: 213px;
+	padding:13px 8px;
 	overflow:hidden;
+	border-bottom:1px @green solid; 
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent #ddd;
 	li{
 		float: left;
 		height:22px;
@@ -140,7 +137,7 @@
 	}
 }
 .box{
-	border:1px solid #CECECE;
+//	border:1px solid #CECECE;
 	background:#f4f4f4;
 }
 .row-list{

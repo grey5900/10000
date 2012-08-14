@@ -60,21 +60,51 @@
 		<div class="content">
 			<div class="row">
 				<div class="ad-img">
-					<ul>
+			<!-- 		<ul>
 						<li><a href="#" target="_blank" title=""><img src="img/pic_01.jpg" alt="" /></a></li>
-					</ul>
+					</ul> -->
+					<div id="myCarousel" class="carousel slide">
+			            <div class="carousel-inner">
+			              <div class="item active">
+			                <a href="#"><img src="img/pic_01.jpg" alt=""></a>
+			                <div class="carousel-caption">
+				                 <h4>label</h4>
+				                  <p>1</p>
+			                </div>
+			              </div>
+			              <div class="item">
+			              	<a href="#"><img src="img/pic_02.jpg" alt=""></a>
+			                <div class="carousel-caption">
+				                  <h4>label</h4>
+				                  <p>2</p>
+			                </div>
+			              </div>
+			              <div class="item">
+			                <a href="#"><img src="img/pic_03.jpg" alt=""></a>
+			                <div class="carousel-caption">
+			                  <h4>label</h4>
+			                  <p>3</p>
+			                </div>
+			              </div>
+			            </div>
+			    	</div>
+			    	<script>
+			    		$('.carousel').carousel({
+						  interval: 2000
+						})
+			    	</script>
 				</div>
 				<div class="box" id="tabbox">
 					<div class="hd">
-						<ul class="tab-holder">
-						    <li class="notice">
-						    	<a href="#">通知</a>
+						<ul class="nav nav-tabs" id="tab">
+						    <li class="active">
+						    	<a data-toggle="tab" href="#home">通知</a>
 						    </li>
-						    <li class="current"><a href="#">待阅</a></li>
+						    <li class=""><a data-toggle="tab" href="#profile">待阅</a></li>
 						</ul>
 					</div>
-					<div class="bd tab-panel">
-						<div>
+					<div class="bd tab-content" id="myTabContent">
+						<div id="home"  class="tab-pane fade in active">
 							<ul>
 								<li>
 									<a href="#"><i class="ico-point"></i>近期主要涉及终端活动资费列表--重要！</a><em>2011-10-10</em>
@@ -114,7 +144,22 @@
 								</li>
 							</ul>
 						</div>
+						<div id="profile" class="tab-pane fade">
+							<ul>
+								<li>
+									<a href="#"><i class="ico-point"></i>近期主要涉及终端活动资费列表--重要！</a><em>2011-10-10</em>
+								</li>
+								<li>
+									<a href="#"><i class="ico-point"></i>近期主要涉及终端活动资费列表--重要！</a><em>2011-10-10</em>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<script>
+						  $(function () {
+						    $('.tabs a:last').tab('show')
+						  })
+					</script>
 				</div>
 				<div class="box" id="rank">
 					<div class="hd">
