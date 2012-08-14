@@ -126,25 +126,71 @@
 					<div class="hero-unit accont">
 						<div class="accont-hd">
 							<div class="accont-comtag">
-								<h3>合作伙伴登录</h3>
+								<h3>合作伙伴引入</h3>
 							</div>
 						</div>
 						<div class="accont-bd">
-							<form action="#" method="post" class="form-horizontal" id="signin-form">
-								<div class="alert-error hide">
-									用户名或密码错误
-								</div>
+							<form class="form-horizontal" id="signup-form" method="post" action="/signup">
 								<div class="control-group">
-									<label class="control-label" for="username">用户名：</label>
+									<label class="control-label" for="username">
+										<span class="warn">*</span> 公司名称：
+									</label>
 									<div class="controls">
-										<input type="text" name="username" value="" id="username" placeholder="用户名" />
+										<input type="text" name="username" value="" id="username" placeholder="公司名称" />
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="password">密码：</label>
+									<label class="control-label" for="password"><span
+										class="warn">*</span>公司地址：</label>
 									<div class="controls">
-										<input type="password" name="password" value="" id="password" placeholder="密码" />
-										<a href="#">忘记密码？</a>
+										<input type="address" name="address" value="" id="address" placeholder="公司地址" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="password_again">
+										<span class="warn">*</span> 联系电话：
+									</label>
+									<div class="controls">
+										<input type="phone" name="phone	" value="" id="phone" placeholder="联系电话" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="email">联系邮箱：</label>
+									<div class="controls">
+										<input type="text" name="email" value="" id="email" />
+										<p class="help-block">用于找回您的帐号，建议填写</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="nickname">合作范围：</label>
+									<div class="controls">
+										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="gender_male">所属行业：</label>
+									<div class="controls">
+										<label class="radio inline"><input type="radio" name="gender" value="2" id="gender_male" /> 全行业</label> 
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="nickname">合作意向：</label>
+									<div class="controls">
+										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="nickname">运营经验：</label>
+									<div class="controls">
+										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
 									</div>
 								</div>
 								<div class="control-group">
@@ -158,17 +204,9 @@
 										</p>
 									</div>
 								</div>
-								<div class="control-group">
-									<div class="controls">
-										<label class="checkbox inline">
-											<input type="checkbox" name="remberpassword" value="1" id="remberpassword"/>
-											记住密码
-										</label>
-									</div>
-								</div>
 								<div class="form-actions">
-									<input type="submit" class="btn btn-success btn-large" data-loading-text="登录中..." value="登录" />
-									<input type="submit" class="btn btn-primary btn-large" data-loading-text="登录中..." value="注册" />
+									<input type="submit" name="submit" class="btn btn-success btn-large" value="提交申请" />
+									<input type="submit" name="submit" class="btn btn btn-large" value="重置" />
 								</div>
 							</form>
 						</div>
