@@ -19,9 +19,7 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-<!--     <script src="js/less-1.1.3.min.js"></script> -->
+    <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/plugins.js"></script>
@@ -130,7 +128,7 @@
 							</div>
 						</div>
 						<div class="accont-bd">
-							<form class="form-horizontal" id="signup-form" method="post" action="/signup">
+							<form action="#" method="post" class="form-horizontal" id="login-form">
 								<div class="control-group">
 									<label class="control-label" for="username">
 										<span class="warn">*</span> 公司名称：
@@ -140,59 +138,86 @@
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="password"><span
+									<label class="control-label" for="address"><span
 										class="warn">*</span>公司地址：</label>
 									<div class="controls">
-										<input type="address" name="address" value="" id="address" placeholder="公司地址" />
+										<input type="text" name="address" value="" id="address" placeholder="公司地址"  class="text-input" />
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="password_again">
+									<label class="control-label" for="phone">
 										<span class="warn">*</span> 联系电话：
 									</label>
 									<div class="controls">
-										<input type="phone" name="phone	" value="" id="phone" placeholder="联系电话" />
+										<input type="text" name="phone" value="" id="phone" class="text-input" placeholder="联系电话">
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="email">联系邮箱：</label>
+									<label class="control-label" for="email">
+										<span class="warn">*</span> 联系邮箱：
+									</label>
 									<div class="controls">
-										<input type="text" name="email" value="" id="email" />
-										<p class="help-block">用于找回您的帐号，建议填写</p>
+										<input type="text" name="email" value="" id="email" placeholder="联系邮箱" />
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="nickname">合作范围：</label>
+									<label class="control-label" for="selectname">合作范围：</label>
 									<div class="controls">
-										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>成都</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>自贡</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>攀枝花</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>泸州</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>德阳</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>绵阳</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>广元</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>遂宁</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>内江</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>乐山</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>宜宾</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>南充</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>广安</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>达州</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>雅安</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>阿坝</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>甘孜</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>凉山</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>巴中</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>眉山</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>资阳</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>攀枝花</label>
+										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>全省</label>
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="gender_male">所属行业：</label>
+									<label class="control-label" for="industry">所属行业：</label>
 									<div class="controls">
 										<label class="radio inline"><input type="radio" name="gender" value="2" id="gender_male" /> 全行业</label> 
 										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 卫生</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 旅游网吧</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 大企业</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 金融</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 教育</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 合作发展中心</label>
+										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 其他</label>
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="nickname">合作意向：</label>
+									<label class="control-label" for="intention">合作意向：</label>
 									<div class="controls">
-										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
+										<textarea id="textarea" rows="5" name="intention" value="" id="intention" class="input-xlarge" maxlength="100"></textarea>
+										<span class="counter">还可以输入100</span>
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="nickname">运营经验：</label>
+									<label class="control-label" for="empirical">
+										<span class="warn">*</span> 运营经验：
+									</label>
 									<div class="controls">
-										<input type="text" name="nickname" value="" id="nickname" class="input-small" maxlength="15" />
+										<textarea  id="textarea" rows="5" name="empirical" value="" id="empirical" class="input-xlarge" maxlength="100"></textarea>
+										<a >还可以输入100</a>
 									</div>
-								</div>
+								</div> 
 								<div class="control-group">
 									<label class="control-label" for="verifycode">
 										<span class="warn">*</span> 验证码：
@@ -205,8 +230,8 @@
 									</div>
 								</div>
 								<div class="form-actions">
-									<input type="submit" name="submit" class="btn btn-success btn-large" value="提交申请" />
-									<input type="submit" name="submit" class="btn btn btn-large" value="重置" />
+									<input type="submit" class="btn btn-success btn-large" value="提交申请" />
+									<input class="btn btn btn-large" type="reset" value="重置">
 								</div>
 							</form>
 						</div>

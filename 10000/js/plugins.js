@@ -2,7 +2,7 @@
     //表单验证插件 v1.9.0 http://bassistance.de/jquery-plugins/jquery-plugin-validation/
     //用户名正则
     $.validator.addMethod("validusername", function(value, element) {
-        return this.optional(element) || /^[a-zA-Z0-9_]{1,15}$/.test(value);
+        return this.optional(element) || /^[a-zA-Z0-9_]{1,30}$/.test(value);
 	}, "User Name Error."
     );
 
@@ -48,23 +48,23 @@
         return check;
     });
     
-    $.validator.addMethod("checkcaptcha", function(value, element) {
-        var check = false;
-        $.ajax({
-            type: "POST",
-            url: "/check_captcha/",
-            async: false,
-            data: "captcha="+value,
-            cache: false,
-            dataType: "json",
-            success: function(data){
-                if (data.code == 1){
-                    check = true;
-                }
-            }
-        })
-        return check;
-    });
+    // $.validator.addMethod("checkcaptcha", function(value, element) {
+    //     var check = false;
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "/check_captcha/",
+    //         async: false,
+    //         data: "captcha="+value,
+    //         cache: false,
+    //         dataType: "json",
+    //         success: function(data){
+    //             if (data.code == 1){
+    //                 check = true;
+    //             }
+    //         }
+    //     })
+    //     return check;
+    // });
 
     
     //登录表单
@@ -159,19 +159,58 @@
 
     
     //注册表单
-      
-    //找回密码
-    $('#resetpassword-form').validate({
+    $("#login-form").validate({
         rules: {
-            email: {
+            username: {
                 required: true,
-                email: true
+                checkusername: true,
+                validusername: true
+            },
+            address: {
+                minlength: 4,
+                required: true
+            },
+            phone: {
+                number: true,
+                required: true
+            },
+            email: {
+                email: true,
+                checkemail: true
+            },
+            empirical: {
+                empirical: true
+            },
+            verifycode: {
+                required: true
+                //checkcaptcha: true
             }
+
         },
         messages: {
+            username: {
+                required: '请输入公司名称',
+                checkusername: '公司名称已注册，请直接<a href="../signin.html">登录</a>或更换公司名称',
+                validusername: '用户名不合法'
+            },
+            address: {
+                minlength: '请补充更详细的地址',
+                required: '请输入公司详细地址'
+            },
+            phone: {
+                number: '请输入正确的电话号码',
+                required: '请输入公司联系电话'
+            },
             email: {
-                required: "请输入邮箱地址",
-                email: "请输入正确的邮箱地址"
+                email: '请输入正确的邮箱地址',
+                checkemail: '公司已注册，请直接<a href="../signin.html">登录</a>或更换邮箱'
+            },
+            empirical: {
+                empirical: '请输入公司运营经验'
+            },
+            verifycode: {
+                required: '请输入验证码'
+                //checkcaptcha: '验证码不正确'
             }
         },
         highlight: function(element) {
@@ -215,24 +254,25 @@
         },
         submitHandler: function(form) {
             var $submit = $(form).find('input[type=submit]');
-            $submit.button('loading');
+            $submit.button("loading");
             $.ajax({
                 type: "POST",
                 url: $(form).attr("action"),
                 data: $(form).serialize(),
                 dataType: "json",
+                complete: function(xhr, textStatus) {
+                    $submit.button("reset");
+                },
                 success: function(data) {
-                	alert(data.msg);
-		            $submit.button('reset');
-					if( navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/) && data.code == 1){
-						window.close();
-					}else if(data.code == 1) {
-                    	window.location.href = "/";
-                    }
+                    $("#messager").messager({
+                        message: data.msg,
+                        refer: "reload"
+                    });
                 }
             });
             return false;
         }
     });
+
 
 });

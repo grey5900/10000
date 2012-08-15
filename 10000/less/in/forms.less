@@ -51,9 +51,41 @@ textarea {
   font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
 }
 
+// Placeholder
+input,
+textarea {
+  .placeholder();
+}
+
+// Form controls
+// -------------------------
+
+
+// IE6 attribute selector fix
+.select
+.textarea,
+.uneditable-input,
+.text-input {
+  .ie7-inline-block ();
+  _display: inline-block;
+  _height: @baseLineHeight;
+  _padding: 4px;
+  _margin-bottom: 9px;
+  _font-size: @baseFontSize;
+  _line-height: @baseLineHeight;
+}
+// IE6 attribute selector fix
+.textarea,
+.uneditable-input,
+.text-input {
+  _background-color: @inputBackground;
+  _border: 1px solid @inputBorder;
+}
+
+
 // Identify controls by their labels
 label {
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
   color: @grayDark;
 }
@@ -64,13 +96,14 @@ textarea,
 select,
 .uneditable-input {
   display: inline-block;
+  .ie7-inline-block ();
   width: 210px;
   height: @baseLineHeight;
   padding: 4px;
   margin-bottom: 9px;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
-  color: @gray;
+//  color: @gray;
   border: 1px solid @inputBorder;
   .border-radius(3px);
 }
@@ -236,7 +269,7 @@ select:focus {
 .input-small      { width: 90px; }
 .input-medium     { width: 150px; }
 .input-large      { width: 210px; }
-.input-xlarge     { width: 270px; }
+.input-xlarge     { width: 300px; }
 .input-xxlarge    { width: 530px; }
 
 // Grid style input sizes
