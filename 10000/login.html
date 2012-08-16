@@ -21,9 +21,10 @@
 
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    
 </head>
 <body>
 	<div class="container">
@@ -112,7 +113,7 @@
 
 				<div class="span9 content-right">
 					<div class="position-nav">
-						<span id="welcome-msg"><i class="icon-user"></i>晚上好！欢迎来到中国电信。</span><span class="welcome-nologin">请[<a href="#">登录</a>][<a href="login.html">注册</a>]</span>
+						<span id="welcome-msg"><i class="icon-user"></i>晚上好！欢迎来到中国电信。</span><span class="welcome-nologin">请[<a href="signin.html">登录</a>][<a href="login.html">注册</a>]</span>
 					</div>
 					<div class="hero-unit accont">
 						<div class="accont-hd">
@@ -158,7 +159,6 @@
 									<div class="controls">
 										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>成都</label>
 										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>自贡</label>
-										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>攀枝花</label>
 										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>泸州</label>
 										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>德阳</label>
 										<label class="checkbox"><input type="checkbox" name="checkbox" value=""/>绵阳</label>
@@ -184,31 +184,48 @@
 								<div class="control-group">
 									<label class="control-label" for="industry">所属行业：</label>
 									<div class="controls">
-										<label class="radio inline"><input type="radio" name="gender" value="2" id="gender_male" /> 全行业</label> 
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 党政</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 卫生</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 旅游网吧</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 大企业</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 金融</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 教育</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 合作发展中心</label>
-										<label class="radio inline"><input type="radio" name="gender" value="1" id="gender_female" /> 其他</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_male" /> 全行业
+										</label> 
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 党政
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 卫生
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 旅游网吧
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 大企业
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 金融
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 教育
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 合作发展中心
+										</label>
+										<label class="radio inline">
+											<input type="radio" name="gender" value="" id="gender_female" /> 其他
+										</label>
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label" for="intention">合作意向：</label>
 									<div class="controls">
-										<textarea id="textarea" rows="5" name="intention" value="" id="intention" class="input-xlarge" maxlength="100"></textarea>
-										<span class="counter">还可以输入100</span>
+										<textarea id="textarea-intention" rows="5" name="intention" value="" id="intention" class="input-xlarge" maxlength="100"></textarea>
+										
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="empirical">
+									<label class="control-label" for="textarea-empirical">
 										<span class="warn">*</span> 运营经验：
 									</label>
 									<div class="controls">
-										<textarea  id="textarea" rows="5" name="empirical" value="" id="empirical" class="input-xlarge" maxlength="100"></textarea>
-										<a >还可以输入100</a>
+										<textarea  id="textarea-empirical" rows="5" name="empirical" value="" id="empirical" class="input-xlarge" maxlength="100"></textarea>
 									</div>
 								</div> 
 								<div class="control-group">
