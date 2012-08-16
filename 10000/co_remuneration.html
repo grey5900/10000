@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>中国电信四川公司合作伙伴门户</title>
+    <title>合作酬金-中国电信四川公司合作伙伴门户</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
 
-	<link rel="stylesheet" type="text/css" href="css/account.css" >
+	<link rel="stylesheet" type="text/css" href="css/co.css" >
 	<link rel="shortcut icon" href="img/favicon.ico">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -18,11 +18,9 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
-	<script src="js/jquery-1.7.2.min.js"></script>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/validate.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -39,6 +37,12 @@
 		<div class="content">
 			<div class="row">
 				<div class="span3">
+					<div class="unlogin">
+						<ul>
+							<li class="first"><a href="signin.html">登录</a></li>
+							<li><a href="login.html">注册</a></li>
+						</ul>
+					</div>
 					<div class="sidebar-nav">
 						<div class="hd"><h3>合作介绍</h3></div>
 						<div class="bd">
@@ -110,67 +114,7 @@
 				</div>
 
 				<div class="span9 content-right">
-					<div class="position-nav">
-						<span id="welcome-msg"><i class="icon-user"></i>晚上好！欢迎来到中国电信。</span><span class="welcome-nologin">请[<a href="#">登录</a>][<a href="login.html">注册</a>]</span>
-					</div>
-					<div class="ad-img">
-						<ul>
-							<li>
-								<a href="#"><img src="img/pic_02.jpg" /></a>
-							</li>
-						</ul>
-					</div>
-					<div class="hero-unit accont">
-						<div class="accont-hd">
-							<div class="accont-comtag">
-								<h3>合作伙伴登录</h3>
-							</div>
-						</div>
-						<div class="accont-bd">
-							<form action="#" method="post" class="form-horizontal" id="signin-form">
-								<div class="alert-error hide">
-									用户名或密码错误
-								</div>
-								<div class="control-group">
-									<label class="control-label" for="username">用户名：</label>
-									<div class="controls">
-										<input type="text" name="username" id="username" placeholder="用户名" />
-									</div>
-								</div>
-								<div class="control-group">
-									<label class="control-label" for="password">密码：</label>
-									<div class="controls">
-										<input type="password" name="password" id="password" placeholder="密码" />
-									</div>
-								</div>
-								<div class="control-group">
-									<label class="control-label" for="verifycode">
-										<span class="warn">*</span> 验证码：
-									</label>
-									<div class="controls">
-										<input type="text" name="verifycode" id="verifycode" placeholder="验证码" class="input-small" maxlength="4" />
-										<p class="valicode">
-											<img id="i_valicode" src="/captcha" style="cursor: pointer;" alt="验证码" title="看不清？点击图片更换一下" onclick="$(this).attr('src','/captcha');" />
-										</p>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="controls">
-										<label class="checkbox inline">
-											<input type="checkbox" name="remberpassword" value="1" id="remberpassword"/>
-											记住密码
-										</label>
-									</div>
-								</div>
-								<div class="form-actions">
-									<input type="submit" class="btn btn-success btn-large" data-loading-text="登录中..." value="登录" />
-									<a class="btn btn-large btn-primary" href="login.html">
-										<span>注册帐号</span>
-									</a>
-								</div>
-							</form>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
