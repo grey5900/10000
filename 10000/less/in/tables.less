@@ -114,6 +114,38 @@ table {
     }
   }
 }
+.table-orange{
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #fff;
+	th,
+	td {
+		border-left: 2px solid #fff;
+		background: #FFECD3;
+	}
+	colgroup + thead tr:first-child th,
+	colgroup + thead tr:first-child td,
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+	  	background: #FFCC66;
+	    border-top: 0;
+	}
+	tbody tr:nth-child(2n+1) td, 
+	tbody tr:nth-child(2n+1) th {
+		background: #FFF6EA;
+	}
+	tbody tr:hover td,
+  	tbody tr:hover th {
+    	background-color: #e8f7c7;
+  	}
+}
+.table-inside{
+	tbody{
+		tr:first-child td{
+			mso-yfti-firstrow:yes;
+		}
+	}
+}
 
 
 // HOVER EFFECT

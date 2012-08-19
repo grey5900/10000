@@ -21,6 +21,65 @@
 
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
+   	<script type="text/javascript">
+		$.ajaxSetup ({
+				cache: true
+		});
+		$(document).ready(function() {
+			//tab切换
+			$(".panel-tab:first").show();
+			$(".tit-tab li").each(function(index){
+				$(this).click(function(){
+					if ($(this).attr('class') != 'current') {
+						$(this).addClass("current").siblings().removeClass("current");
+						$(this).parents(".tit-tab").siblings(".content-tab").find(".panel-tab").eq(index).show().siblings().hide();
+						loadQueryList(index + '');
+					}			
+				})		
+			});	
+			loadQueryList('init');
+		});
+		function getCurTabIndex() {	
+			var wo = -1;
+			$(".tit-tab li").each(function(index){		
+				if ($(this).attr('class') == 'current') {			
+					wo = index;
+				}
+			});
+			return wo;
+		}
+		function loadQueryList(index) {
+			//	alert(index);
+				var loadingImg = "<div height:500px; width:500px; align='center'>";
+				$("#requisition_info").html(loadingImg);
+				var url = "";		
+				if (index == 'init') {
+					url += "/action/action_support_0.action";
+					iframeFunction(url);
+				} else if (index == '0') {			
+					url += "/action/action_support_0.action";
+				} else if (index == '1') {			
+					url += "action/action_support_1.action";			
+				} else if (index == '2') {		
+					url += "action/action_support_2.action";
+				} else if (index == '3') {		
+					url += "action/action_support_3.action";
+				} else if (index == '4') {		
+					url += "action/action_support_4.action";
+				} else if (index == '5') {		
+					url += "action/action_support_5.action";
+				} else if (index == '6') {		
+					url += "action/action_support_6.action";
+				}
+				iframeFunction("requisition_info","uiframe",url);			
+		}
+		 window.onload = function(){
+		     for (var ii = 0; ii < document.links.length; ii++) 
+		         document.links[ii].onfocus = function(){
+		             this.blur()
+		         }
+		 }
+		</script>
 </head>
 <body>
 	<div class="container">
@@ -37,10 +96,10 @@
 		<div class="content">
 			<div class="row">
 				<div class="span3">
-					<div class="unlogin">
+					<div class="topbtn">
 						<ul>
-							<li class="first"><a href="signin.html">登录</a></li>
-							<li><a href="login.html">注册</a></li>
+							<li class="unsignin"><a href="signin.html">登录</a></li>
+							<li class="unlogin"><a href="login.html">注册</a></li>
 						</ul>
 					</div>
 					<div class="sidebar-nav">
@@ -114,7 +173,31 @@
 				</div>
 
 				<div class="span9 content-right">
-					
+					<div class="box">
+						<div class="hd">
+							<h3 class="box-top">
+								合作服务与支撑
+							</h3>
+						</div>
+						<div class="bd">
+							<div class="tit-tab">
+								<ul>
+									<li class="current"><span>四项服务原则</span></li>
+									<li><span>业务支撑</span></li>
+									<li><span>IT支撑</span></li>
+									<li><span>合作结算</span></li>
+									<li><span>服务沟通机制</span></li>
+									<li><span>尊享服务</span></li>
+									<li><span>服务热线</span></li>
+								</ul>
+							</div>
+							<div class="content content-tab" id="requisition_info">
+								<iframe src="" onload="autoHeight(this);" scrolling="no" frameborder="0" allowtransparency="true" id="uiframe" width="100%">
+									d
+								</iframe>
+							</div>	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

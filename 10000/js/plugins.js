@@ -13,40 +13,40 @@
     );
    
     //自定义方法检测用户名是否可用，示例：checkusername: true
-    $.validator.addMethod("checkusername", function(value, element) {
-        var check = false;
-        $.ajax({
-            type: "GET",
-            url: "/check_username/"+value,
-            async: false,
-            cache: false,
-            dataType: "json",
-            success: function(data){
-                if (data.code == 1){
-                    check = true;
-                }
-            }
-        })
-        return check;
-    });
+    // $.validator.addMethod("checkusername", function(value, element) {
+    //     var check = false;
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "/check_username/"+value,
+    //         async: false,
+    //         cache: false,
+    //         dataType: "json",
+    //         success: function(data){
+    //             if (data.code == 1){
+    //                 check = true;
+    //             }
+    //         }
+    //     })
+    //     return check;
+    // });
 
-    $.validator.addMethod("checkemail", function(value, element) {
-        var check = false;
-        $.ajax({
-            type: "POST",
-            url: "/check_email/",
-            async: false,
-            data: "email="+value,
-            cache: false,
-            dataType: "json",
-            success: function(data){
-                if (data.code == 1){
-                    check = true;
-                }
-            }
-        });
-        return check;
-    });
+    // $.validator.addMethod("checkemail", function(value, element) {
+    //     var check = false;
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "/check_email/",
+    //         async: false,
+    //         data: "email="+value,
+    //         cache: false,
+    //         dataType: "json",
+    //         success: function(data){
+    //             if (data.code == 1){
+    //                 check = true;
+    //             }
+    //         }
+    //     });
+    //     return check;
+    // });
     
     // $.validator.addMethod("checkcaptcha", function(value, element) {
     //     var check = false;
@@ -159,7 +159,7 @@
 
     
     //注册表单
-    $("#login-form").validate({
+    $('#login-form').validate({
         rules: {
             username: {
                 required: true,
@@ -273,6 +273,13 @@
             return false;
         }
     });
-
-
+    $("#textarea-intention,#textarea-empirical").charCount({
+        allowed: 100,
+        warning: 10,
+        css: 'counter',
+        counterElement: 'span',
+        cssWarning: 'warning',
+        cssExceeded: 'exceeded',
+        counterText: '还可以输入'
+    });
 });

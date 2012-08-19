@@ -1,23 +1,111 @@
 @import "main.less";
 @import "sidebar_nav.less";
-.row{
-	width: 100%;
-	margin:20px 0;
-	.span3{
-		width: 230px;
-		margin:0px;
-	}
-	.span9{
-		width: 730px;
-	}
-}
 .content-right{
 
 }
 .box{
 	.hd{
-		background: transparent url(../img/boxtopbg.gif) 0px 0px no-repeat;
-		height: 32px;
+		background: transparent url(../img/boxtop.gif) 0px 0px no-repeat;
+		height: 42px;
 		display: block;
+		h3{
+			font-weight: bold;
+			margin:0 45px;
+			line-height: 42px;
+		}
+	}
+	.bd{
+		border:1px solid #cacaca;
+		border-top:0;
+		background: #fff;
+		.content{
+			padding:25px;
+			p{
+				font-size: 14px;
+			    line-height: 24px;	
+			    .font-yab();
+			    &.copy1{
+					color: @greenDark;
+					font-weight: bold;
+				}
+				&.copy2{
+					background:#f3f3f3;
+					display: block;
+					color: @grayDark;
+					font-weight: bold;
+					margin:10px 20px 0;
+					padding:0 10px;
+					border-radius:8px;
+					-moz-border-radius:8;
+					-webkit-border-radius:8px;
+					img{
+						margin-right:5px;
+					}
+					em{
+						font-size: 12px;			    
+						text-indent: 2em;
+					}
+				}
+				&.copy3{
+					margin:20px;
+					font-size: 12px;			    
+					text-indent: 2em;
+				}
+				&.copy4{
+					margin:10px;
+					font-weight: bold;
+					font-size: 14px;
+				}	    
+			}
+		}
+		.tit-tab{
+			padding-top: 20px;
+			height: 28px;
+			border-bottom: 5px solid #81BA21;
+			width: 728px;
+			position: relative;
+			ul{
+			position: absolute;
+			width: 728px;	
+			}
+			li{
+				float: left;
+				padding-left: 22px;
+				position: relative;
+				cursor: pointer;
+				background: url(../img/selser_tab_nav.gif) no-repeat 100% 0;
+				span{
+					line-height: 28px;
+					font-size: 12px;
+					color: #333;
+					font-weight: bold;
+					display: block;
+					padding-right: 22px;
+				}
+				&.current{
+					background: url(../img/sprite_btn.gif) no-repeat 0 0;
+					height: 35px;
+					//padding-top:7px;
+					//line-height: 28px;
+					top: -7px;
+					span{
+						background: url(../img/sprite_btn.gif) no-repeat 100% 0;
+						color: white;
+						line-height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+.table{
+	th,td{
+		border:2px solid #fff;
+	}
+	tbody{
+		tr td:first-child {
+			font-weight: bold;
+			text-align: center;
+		}
 	}
 }
