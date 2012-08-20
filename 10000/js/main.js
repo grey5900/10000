@@ -1,4 +1,5 @@
- !function($) {
+!function($) {
+	var loading = false;
     $.fn.extend({
         /**
          * 字数统计
@@ -48,23 +49,8 @@
                 $(this).change(function() {
                     calculate(this)
                 });
+                
             });
         }
     })
-
-    $.ajaxSetup ({
-                cache: true
-        });
-
-    $(".panel-tab:first").show();
-    $(".tit-tab li").each(function(index){
-        $(this).click(function(){
-            if ($(this).attr('class') != 'current') {
-                $(this).addClass("current").siblings().removeClass("current");
-                $(this).parents(".tit-tab").siblings(".content-tab").find(".panel-tab").eq(index).show().siblings().hide();
-                    loadQueryList(index + '');
-                }           
-            })      
-        });
-        loadQueryList('init');    
 } (window.jQuery);
