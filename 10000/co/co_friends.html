@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>合作服务于支撑-中国电信四川公司合作伙伴门户</title>
+    <title>如何成为合作伙伴-中国电信四川公司合作伙伴门户</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
 
-	<link rel="stylesheet" type="text/css" href="css/co.css" >
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/co.css" >
+	<link rel="shortcut icon" href="../img/favicon.ico">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,73 +19,14 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-   	<script type="text/javascript">
-		$.ajaxSetup ({
-				cache: true
-		});
-		$(document).ready(function() {
-			//tab切换
-			$(".panel-tab:first").show();
-			$(".tit-tab li").each(function(index){
-				$(this).click(function(){
-					if ($(this).attr('class') != 'current') {
-						$(this).addClass("current").siblings().removeClass("current");
-						$(this).parents(".tit-tab").siblings(".content-tab").find(".panel-tab").eq(index).show().siblings().hide();
-						loadQueryList(index + '');
-					}			
-				})		
-			});	
-			loadQueryList('init');
-		});
-		function getCurTabIndex() {	
-			var wo = -1;
-			$(".tit-tab li").each(function(index){		
-				if ($(this).attr('class') == 'current') {			
-					wo = index;
-				}
-			});
-			return wo;
-		}
-		function loadQueryList(index) {
-			//	alert(index);
-				var loadingImg = "<div height:500px; width:500px; align='center'>";
-				$("#requisition_info").html(loadingImg);
-				var url = "";		
-				if (index == 'init') {
-					url += "/action/action_support_0.action";
-					iframeFunction(url);
-				} else if (index == '0') {			
-					url += "/action/action_support_0.action";
-				} else if (index == '1') {			
-					url += "action/action_support_1.action";			
-				} else if (index == '2') {		
-					url += "action/action_support_2.action";
-				} else if (index == '3') {		
-					url += "action/action_support_3.action";
-				} else if (index == '4') {		
-					url += "action/action_support_4.action";
-				} else if (index == '5') {		
-					url += "action/action_support_5.action";
-				} else if (index == '6') {		
-					url += "action/action_support_6.action";
-				}
-				iframeFunction("requisition_info","uiframe",url);			
-		}
-		 window.onload = function(){
-		     for (var ii = 0; ii < document.links.length; ii++) 
-		         document.links[ii].onfocus = function(){
-		             this.blur()
-		         }
-		 }
-		</script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </head>
 <body>
 	<div class="container">
 		<!-- header -->
 		<div class="header">
-			<a href="#" class="logo"><img src="img/logo.gif" alt="中国电信四川公司合作伙伴门户"/></a>
+			<a href="#" class="logo"><img src="../img/logo.gif" alt="中国电信四川公司合作伙伴门户"/></a>
 			<div class="header-nav">
 				<div class="title">
 					<h1>中国电信四川公司合作伙伴门户</h1>
@@ -98,8 +39,8 @@
 				<div class="span3">
 					<div class="topbtn">
 						<ul>
-							<li class="unsignin"><a href="signin.html">登录</a></li>
-							<li class="unlogin"><a href="login.html">注册</a></li>
+							<li class="unsignin"><a href="../signin.html">登录</a></li>
+							<li class="unlogin"><a href="../login.html">注册</a></li>
 						</ul>
 					</div>
 					<div class="sidebar-nav">
@@ -176,25 +117,22 @@
 					<div class="box">
 						<div class="hd">
 							<h3 class="box-top">
-								合作服务与支撑
+								如何成为合作伙伴
 							</h3>
 						</div>
 						<div class="bd">
-							<div class="tit-tab">
-								<ul>
-									<li class="current"><span>四项服务原则</span></li>
-									<li><span>业务支撑</span></li>
-									<li><span>IT支撑</span></li>
-									<li><span>合作结算</span></li>
-									<li><span>服务沟通机制</span></li>
-									<li><span>尊享服务</span></li>
-									<li><span>服务热线</span></li>
-								</ul>
-							</div>
-							<div class="content content-tab" id="requisition_info">
-								<iframe src="" onload="autoHeight(this);" scrolling="no" frameborder="0" allowtransparency="true" id="uiframe" width="100%">
-									d
-								</iframe>
+							<div class="content">
+								<p class="copy1"><img src="../img/f_one.gif" width="122" height="38"/></p>
+								<p>获知合作信息，双方进行初步沟通</p>
+								<p class="copy3">如果您计划在省内多个市州开展合作业务，请致电中国电信四川公司合作服务热线4008991000；如果您只在某个市州开展合作业务，也可致电中国电信四川省内各分公司指定合作服务电话，详见：“<a href="#">分公司合作服务电话</a>”。 <br />
+									您也可通过中国电信四川公司合作伙伴门户网站查阅公开的合作伙伴招募信息以及合作动态，及时获取信息。（中国电信四川公司合作伙伴门户网站：<a href="http://hzhb.sc.ct10000.com/">http://hzhb.sc.ct10000.com/</a>）
+								</p>
+								<p class="copy1"><img src="../img/f_two.gif" width="122" height="38"/></p>
+								<p class="copy3">中国电信与合作伙伴接洽，双方商谈确定合作模式，请您提供指定文件资料。 </p>
+								<p class="copy1"><img src="../img/f_three.gif" width="122" height="38"/></p>
+								<p class="copy3">合作伙伴引入并完全提供相关文件后，5个工作日内完成评审；合作模式确定后，5个工作日内向合作伙伴提供合作协议文本，10个工作日内完成合作协议审核流程，双方签订合作合同或协议。</p>
+								<p class="copy1"><img src="../img/f_four.gif" width="122" height="38"/></p>
+								<p class="copy3">合作协议签订后，协助合作伙伴于3个工作日内完成保证金缴纳，合作伙伴展开合作业务运作，中国电信提供全方位、一站式的服务和支撑。</p>
 							</div>	
 						</div>
 					</div>

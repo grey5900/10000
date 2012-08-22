@@ -8,7 +8,7 @@
         charCount: function(options) {
 
             var defaults = {
-                allowed: 140,
+                allowed: 100,
                 warning: 10,
                 css: 'counter',
                 counterElement: 'span',
@@ -51,6 +51,6 @@
                 });
                 
             });
-        }
+        },
     })
 } (window.jQuery);

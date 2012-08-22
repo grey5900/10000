@@ -26,8 +26,7 @@
 	<div class="panel-tab" style="border-bottom: 1px #e4e4e4 solid;">
 		<div class="">
 			<div class="">
-				
-				<form id="advice_form"  name="advice_form" action="/action/action_support_1.html" method="post">
+				<form id="advice_form"  name="advice_form" action="action_support_0.action" method="post">
 					大师傅
 				</form>
 			</div>
