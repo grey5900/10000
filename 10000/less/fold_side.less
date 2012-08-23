@@ -8,12 +8,20 @@
 		border-width:0 1px 1px 1px;
 		border-style:solid;
 		border-color:#cacaca;
-		background-color: transparent;
-		background: #fff;
+		background-color: #f6f6f6;
+		background: -moz-linear-gradient(center top , #fefffe 0%, #ecf6e2 100%) repeat scroll 0 0 #ecf6e2;
+		background: -webkit-linear-gradient(center top , #fefffe 0%, #ecf6e2 100%) repeat scroll 0 0 #ecf6e2;   
+		-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
 		.clearfix ();
+		li.fold-current{
+			width: 240px;
+			background:#fff;
+			font-weight: bold;
+		}
 		li{
 			background: url("../img/common_navleft_bg.gif") no-repeat scroll left bottom transparent;
-		    //background: -moz-linear-gradient(center top , #FFFFFF 0%, #EDEDED 100%) repeat scroll 0 0 transparent;  
 		    z-index: 1000;
 			float: left; 
 			position: relative;  
@@ -40,9 +48,8 @@
 				a{
 					color: @grayDark;
 					text-shadow: none;
-					background: -moz-linear-gradient(center top , #6BAA01 0%, #ededed 100%) repeat scroll 0 0 transparent;
+					background:@green;
 					width: 80%;
-					//background: url("../img/common_leftsanjiaohover.gif") no-repeat scroll right top transparent; 
 				}
 			}	
 		}
@@ -110,7 +117,7 @@
 	i{
 		cursor: pointer;
 		display: inline-block;
-		margin:5px 20px 0 -10px;
+		margin:5px 20px 0 -20px;
 		width: 12px;
 		height: 12px;
 	}
