@@ -18,10 +18,30 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
+    <script src="../js/jquery-1.7.2.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+   	<script src="../js/iframeTab.js"></script>
+   	<script type="text/javascript">
+		function loadQueryList(index) {
+			//alert(index);
+			var loadingImg = "<div height:500px; width:500px; align='center'></div>";
+			$("#requisition_info").html(loadingImg);
+			var url = "";
+			if (index == 'init') {
+				url += "http://127.0.0.1:8020/10000/action/action_condition_0.action";
+				iframeFunction(url);
+			} else if (index == '0') {
+				url += "http://127.0.0.1:8020/10000/action/action_condition_0.action";
+			} else if (index == '1') {
+				url += "http://127.0.0.1:8020/10000/action/action_condition_1.action";
+			}else if (index == '2') {
+				url += "http://127.0.0.1:8020/10000/action/action_condition_2.action";
+			}
+			iframeFunction("requisition_info", "uiframe", url);
+		}
 
-    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.js"></script>
-   	<script type="text/javascript" src="../js/iframeTab.js"></script>
+   	</script>
 </head>
 <body>
 	<div class="container">
@@ -129,154 +149,7 @@
 									<li><span>增值类合作伙伴引入基本信息 </span></li>
 								</ul>
 							</div>
-							<div class="content">
-								<table class="table table-orange">
-									<thead>
-										<tr style="mso-yfti-irow:0;">
-											<td colspan="2" rowspan="2">合作伙伴</td>
-											<td colspan="2">合作拓展型</td>
-											<td>合作运营型</td>
-										</tr>
-											<tr style="mso-yfti-irow:1;">
-											<td>合作直销队</td>
-											<td>关系型合作伙伴</td>
-											<td>行业应用合作伙伴 </td>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td colspan="2">选择原则 </td>
-											<td>销售能力
-											<br />
-											客户资源
-											<br />
-											忠诚度
-											<br />
-											</td>
-											<td> 客户资源
-											<br />
-											渠道资源 </td>
-											<td>
-											<br />
-											服务能力
-											<br />
-											资金平台 </td>
-										</tr>
-										<tr style="mso-yfti-irow:3;">
-											<td rowspan="3">法律层面 </td>
-											<td>企业法人营业执照 </td>
-											<td>√</td>
-											<td>√</td>
-											<td>√</td>
-										</tr>
-										<tr style="mso-yfti-irow:4;">
-											<td>资质证明 </td>
-											<td>√</td>
-											<td>√</td>
-											<td>√</td>
-										</tr>
-										<tr style="mso-yfti-irow:5;">
-											<td>税务登记证</td>
-											<td>√</td>
-											<td>√</td>
-											<td>√</td>
-										</tr>
-										<tr style="mso-yfti-irow:6;">
-											<td rowspan="4">市场层面</td>
-											<td>商业计划书</td>
-											<td><span style="mso-fareast-language:KO">
-												<o:p>
-													&nbsp;
-												</o:p> </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>
-										<tr style="mso-yfti-irow:8">
-											<td > 保证金额 </td>
-											<td> √ </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>
-										<tr style="mso-yfti-irow:8">
-											<td > 排他要求 </td>
-											<td> √ </td>
-											<td><span style="mso-fareast-language:KO">
-													<o:p>
-													&nbsp;
-												</o:p> </td>
-											<td > √ </td>
-										</tr>
-										<tr style="mso-yfti-irow:9">
-											<td> 终端品牌代理授权 </td>
-											<td> √ </td>
-											<td> √ </td>
-											<td> √ </td>
-										</tr>
-										<tr style="mso-yfti-irow:10">
-											<td  rowspan="5"> 其他层面 </td>
-											<td > 资金实力 </td>
-											<td>5 万元 </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>											
-										<tr>
-										<td>企业规模</td>
-											<td>
-											<o:p>
-												&nbsp;
-											</o:p></td>
-											<td>
-											<o:p>
-												&nbsp;
-											</o:p></td>
-											<td > √ </td>
-										</tr>
-										<tr>
-											<td > 信誉资质 </td>
-											<td> √ </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>
-										<tr>
-											<td> 服务要求 </td>
-											<td> √ </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>
-										<tr>
-											<td > 团队素质 </td>
-											<td> √ </td>
-											<td> √ </td>
-											<td > √ </td>
-										</tr>
-									</tbody>
-								</table>
-								<table class="table table-orange">
-									<img src="../img/hzlx.jpg" />
-								</table>
-								<p class="copy4">
-								  1、商业计划书（word格式），包含“公司背景及团队介绍、SP主要管理人员简介，联系方式、其他省运营情况或其他平台合作情况等<br />
-	
-							      2、版权授权证明文件电子版<br />
-							
-							      3、填写《增值业务合作申请表》，并在申请表上加盖公章<br />
-							
-							      4、业务策划方案(PPT格式)，包含“营销推广策略、渠道内容说明、包括业务名称、业务代码、业务说明、业务种类、业务类型（点播/订购）、计费类型（包月/按条）、业务资费、发送频率、业务处理地址、指令（点播/订购/退订）、同类产品分析”等内容<br />
-							
-							      5、客户服务解决方案：包括客服热线、客服联系人电话、客服邮箱、客服人员数量等要素（word格式）<br />
-							
-							      6、企业法人营业执照（仅对新增SP适用）<br />
-							
-							      7、增值电信业务经营许可证（仅对新增SP适用）<br />
-							
-							      8、银行开户许可证（仅对新增SP适用）<br />
-							
-							      9、税务登记证（仅对新增SP适用）<br />
-							
-							      10、短消息类服务接入代码使用证书（仅对新增SP适用）<br />
-							
-							      11、公益类业务申报特殊要求：提供国家税务机关出具的免税证明 <br />
-								</p>
+							<div class="content-tab" id="requisition_info">
 							</div>	
 						</div>
 					</div>

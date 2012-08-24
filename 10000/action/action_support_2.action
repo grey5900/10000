@@ -1,34 +1,14 @@
-<script>
-	var CMSbase = "";
-	var CMSPath = ""; 
-</script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <script type="text/javascript">var webRootPath = "";</script>
 <title>四项服务原则-合作与支撑 </title>
-<link rel="stylesheet" type="text/css" href="css/co.css" >
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script language="javascript" type="text/javascript">
-	$(document).ready(function() {
-		$("#advice_form").validationEngine({
-
-		});
-		var sid = $.trim($("#selSuperregion").val());
-		if (sid) {
-			showArea(sid);
-		}
-	});
-	$.ajaxSetup({
-		cache : true
-	}); 
-</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/co.css" >
 <div class="content-tab">
-	<div class="panel-tab" style="border-bottom: 1px #e4e4e4 solid;">
+	<div class="panel-tab">
 		<div class="">
 			<div class="">
-				
-				<form id="advice_form"  name="advice_form" action="/action/action_support_1.html" method="post">
-					大师傅
+				<form id="advice_form"  name="advice_form" action="http://127.0.0.1:8020/10000/action/action/action_support_1.action" method="post">
+					2
 				</form>
 			</div>
 		</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script type="text/javascript">var webRootPath = "";</script>
+<title>增值类合作伙伴引入基本信息-合作伙伴条件  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/co.css" >
+<div class="content-tab" id="requisition_info">
+	<div class="panel-tab">
+		<form id="advice_form"  name="advice_form" action="http://127.0.0.1:8020/10000/action/action_condition_2.action" method="post">
+			<p class="copy4">
+				1、商业计划书（word格式），包含“公司背景及团队介绍、SP主要管理人员简介，联系方式、其他省运营情况或其他平台合作情况等<br />
+	
+				2、版权授权证明文件电子版<br />
+							
+				3、填写《增值业务合作申请表》，并在申请表上加盖公章<br />
+							
+				4、业务策划方案(PPT格式)，包含“营销推广策略、渠道内容说明、包括业务名称、业务代码、业务说明、业务种类、业务类型（点播/订购）、计费类型（包月/按条）、业务资费、发送频率、业务处理地址、指令（点播/订购/退订）、同类产品分析”等内容<br />
+							
+				5、客户服务解决方案：包括客服热线、客服联系人电话、客服邮箱、客服人员数量等要素（word格式）<br />
+							
+				6、企业法人营业执照（仅对新增SP适用）<br />
+							
+				7、增值电信业务经营许可证（仅对新增SP适用）<br />
+							
+				8、银行开户许可证（仅对新增SP适用）<br />
+							
+				9、税务登记证（仅对新增SP适用）<br />
+							
+				10、短消息类服务接入代码使用证书（仅对新增SP适用）<br />
+							
+				11、公益类业务申报特殊要求：提供国家税务机关出具的免税证明 <br />
+			</p>	
+		</form>
+	</div>
+</div>

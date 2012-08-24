@@ -26,31 +26,31 @@
 		return wo;
 	}
 
-	function loadQueryList(index) {
-		alert(index);
-		var loadingImg = "<div height:500px; width:500px; align='center'>";
-		$("#requisition_info").html(loadingImg);
-		var url = "";
-		if (index == 'init') {
-			url += "../action/action_support_0.action";
-			iframeFunction(url);
-		} else if (index == '0') {
-			url += "../action/action_support_0.action";
-		} else if (index == '1') {
-			url += "../action/action_support_1.action";
-		} else if (index == '2') {
-			url += "../action/action_support_2.action";
-		} else if (index == '3') {
-			url += "../action/action_support_3.action";
-		} else if (index == '4') {
-			url += "../action/action_support_4.action";
-		} else if (index == '5') {
-			url += "../action/action_support_5.action";
-		} else if (index == '6') {
-			url += "../action/action_support_6.action";
-		}
-		iframeFunction("requisition_info", "uiframe", url);
-	}
+	// function loadQueryList(index) {
+		// //alert(index);
+		// var loadingImg = "<div height:500px; width:500px; align='center'></div>";
+		// $("#requisition_info").html(loadingImg);
+		// var url = "";
+		// if (index == 'init') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_0.action";
+			// iframeFunction(url);
+		// } else if (index == '0') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_0.action";
+		// } else if (index == '1') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_1.action";
+		// } else if (index == '2') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_2.action";
+		// } else if (index == '3') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_3.action";
+		// } else if (index == '4') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_4.action";
+		// } else if (index == '5') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_5.action";
+		// } else if (index == '6') {
+			// url += "http://127.0.0.1:8020/10000/action/action_support_6.action";
+		// }
+		// iframeFunction("requisition_info", "uiframe", url);
+	// }
 
 
 	window.onload = function() {
