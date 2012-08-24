@@ -36,8 +36,13 @@
 			font-size:14px; 
 			font-weight:bold;
 			a{
-				font-size: 12px;
+				font-size: 14px;
 			}
+		}
+		li.first{
+			a{
+				border-left-width:0;	
+			}		
 		}
 	}
 	.bd{
@@ -167,11 +172,35 @@
 		border-style:solid;
 		border-width:0 1px 1px 1px;
 	}
+	.table .filter{
+		background: #ffffff url(../img/filter_bg.gif) 0px 0px repeat-x;
+		height: 30px;
+		th{
+			height: 30px;
+			line-height: 30px;
+			text-align: left;
+			font-weight: normal;
+			span{
+				font-weight: bold;
+				margin:0 3px;
+			}
+			a{
+				color:@blue;
+				margin:0 5px;
+				text-decoration: none;				
+				&:hover{
+					color:@blueDark;
+				}
+			}
+			em{
+				color:#ccc;
+			}
+		}
+	}
 	.table th, .table td{
 		text-align: center;
 		padding:0;
 		height: 36px;
 		line-height: 36px;
-	}
-	
+	}	
 }
