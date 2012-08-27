@@ -8,18 +8,14 @@
 		border-width:0 1px 1px 1px;
 		border-style:solid;
 		border-color:#cacaca;
-		background-color: #f6f6f6;
+		background: #f6f6f6;
 		background: -moz-linear-gradient(center top , #fefffe 0%, #ecf6e2 100%) repeat scroll 0 0 #ecf6e2;
 		background: -webkit-linear-gradient(center top , #fefffe 0%, #ecf6e2 100%) repeat scroll 0 0 #ecf6e2;   
 		-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
 		-moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
 		box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
 		.clearfix ();
-		li.fold-current{
-			width: 240px;
-			background:#fff;
-			font-weight: bold;
-		}
+		
 		li{
 			background: url("../img/common_navleft_bg.gif") no-repeat scroll left bottom transparent;
 		    z-index: 1000;
@@ -38,22 +34,39 @@
 			    font-weight: bold;
 			    padding-left: 40px;
 			    width: 157px;
-			    color:@gray;
+			    color:#598200;
     			border-top: 1px solid #fff;
     			text-shadow: 0px 1px 0px #fff;
 			    text-decoration: none;
 			    white-space: nowrap;
 			}
 			&:hover{
+				background: @green url() 0px 0px no-repeat;
 				a{
-					color: @grayDark;
-					text-shadow: none;
-					background:@green;
-					width: 80%;
+					background: url("../img/common_leftsanjiaohover.gif") no-repeat scroll right top transparent;
+					color: #fff;
+					text-shadow: none;	
+					border-top:0;
 				}
 			}	
 		}
+		.fold-current{
+			width: 240px;
+			font-weight: bold;
+			background: @green;
+			a{
+				color: #fff;
+				border-top:0;
+				text-shadow:none;
+			}
+		}
 	}
+}
+.sidebar-nav > ul > li >ul{
+	border:0;
+	box-shadow:none;
+	background: @green url() 0px 0px no-repeat;
+	width: 200px;
 }
 .sidebar-nav > ul > li ul,
 .sidebar-nav > ul > li ul ul,
@@ -63,7 +76,7 @@
 	top: 0px;
 	left: 100%;
 	z-index: 9999;
-	margin-top: 1px;
+//	margin-top: 1px;
 }
 
 .sidebar-nav ul li:first-child > a{
