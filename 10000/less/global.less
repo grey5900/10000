@@ -1,0 +1,67 @@
+/*
+ * IE6 Fixed */
+
+* html,* html body {
+	//_background-image: url(about:blank);
+	_background-attachment: fixed;
+}
+// How to use
+//
+//top:expression(eval(document.documentElement.scrollTop));
+//left:expression(eval(document.documentElement.scrollLeft));
+//top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+//left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+
+#returntop {
+	display: none;
+	position: fixed;
+	_position: absolute;
+	_top:~"expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0) - 20))";
+	right: 50%;
+	margin-right: -560px;
+	bottom: 20px;
+	width: 43px;
+	height: 55px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(/img/returntop.png) 0px 0px no-repeat;
+	_background: url(/img/returntop.gif) 0px 0px no-repeat;
+	&:hover {
+		background-position: 0px -55px;
+	}
+}
+
+/*
+ * font*/
+ 
+.font-yab{font-family: "Microsoft YaHei",@baseFontFamily;}
+
+/*
+ * line*/
+.dotted-line{
+	background:url("../img/dotted.png") repeat-x scroll 0 0 transparent;	
+}
+.dotted-solid-line{
+	border-bottom:1px solid #e8ecde;
+}
+
+/*
+ * link*/
+.gray-link{
+	color: @grayDarker;
+	&:hover{
+		color: @blue;
+	}
+	&:visited{
+		color: @grayDark;
+	}
+}
+.blue-link{
+	color: #0f92a1;
+	&:hover{
+		color: darken(#0f92a1, 15%);
+	}
+	&:visited{
+		color: @grayDark;
+	}
+}
