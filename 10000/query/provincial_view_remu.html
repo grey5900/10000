@@ -10,6 +10,8 @@
     <!-- Le styles -->
 
 	<link rel="stylesheet" type="text/css" href="../css/query.css" >
+	<link rel="stylesheet" href="../css/fold_side.css" >
+	<link rel="stylesheet" href="../css/view.css" >
 	<link rel="shortcut icon" href="../img/favicon.ico">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -25,7 +27,7 @@
     <script type="text/javascript"  src="../js/plugins.js"></script>
     <script type="text/javascript"  src="../js/main.js"></script>
     <script type="text/javascript"  src="../js/accordion.min.js"></script>
-    <script type="text/javascript" src="../js/dwz.navTab.js"></script>
+    <script src="../js/datepicker.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -156,11 +158,11 @@
 				            				<tr>
 				            					<td>
 				            						<label>开始时间：</label>
-				            						<input class="span3" type="text" placeholder="Type something…">
+				            						<input type="date" id="query_start" class="input-medium " data-date-format="yyyy-mm-dd">
 				            					</td>
 				            					<td>
 				            						<label>结束时间：</label>
-				            						<input class="span3" type="text" placeholder="Type something…"><br />
+				            						<input type="date" id="query_end" class="input-medium " data-date-format="yyyy-mm-dd">
 				            					</td>
 				            				</tr>
 				            				<tr>

@@ -37,3 +37,23 @@
 		return timeBanner;
 	}
 }(window.jQuery);
+$(function(){
+	var startDate = new Date;
+	var endDate = new Date;
+	$('#query_start').datepicker().on('changeDate', function(ev){
+		if (ev.date.valueOf() > endDate.valueOf()){
+			$('#alert').show().find('strong').text('开始日期不能大于结束日期');
+		} else {
+			$('#alert').hide();
+			startDate = new Date(ev.date);
+		}
+	});
+	$('#query_end').datepicker().on('changeDate', function(ev){
+		if (ev.date.valueOf() < startDate.valueOf()){
+			$('#alert').show().find('strong').text('结束日期不能小于开始日期');
+		} else {
+			$('#alert').hide();
+			endDate = new Date(ev.date);
+		}
+	});
+});
