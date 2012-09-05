@@ -32,9 +32,9 @@
 }
 .viewBody {
   background: url(../img/view_bg.gif) left bottom no-repeat;
-  min-height: 700px;
+  min-height: 550px;
 }
-.table_info h5 {
+.table-info h5 {
   background: url(../img/table_tit.jpg) 0 0 no-repeat;
   color: #535353;
   font-size: 12px;
@@ -43,6 +43,9 @@
   line-height: 32px;
   padding-left: 25px;
 }
-.table_info .table {
+.table-info .table {
   margin: 0;
+}
+.sub-table {
+  margin: 20px 0 0 320px ;
 }

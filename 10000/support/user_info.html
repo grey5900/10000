@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../css/main.css" >
 	<link rel="stylesheet" href="../css/fold_side.css" >
 	<link rel="stylesheet" href="../css/view_table.css" >
+	<link rel="stylesheet" href="../css/tit_tab.css" >
 	<link rel="shortcut icon" href="img/favicon.ico">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -184,9 +185,17 @@
 				  	</div>
 				  	<div class="viewtable">
 			            <div class="viewBody">
-			            	<div class="table_info">
-			            		<h5>基本信息</h5>
-			            		<ul>
+			            	<div class="tit-tab">
+								<ul id="myTab" class="nav_tabs">
+									<li class="active"><a data-toggle="tab" href="#info1">基本信息</a></li>
+									<li><a data-toggle="tab" href="#info2">联系方式</a></li>
+									<li><a data-toggle="tab" href="#info3">支付方式</a></li>
+									<li><a data-toggle="tab" href="#info4">经营信息</a></li>
+								</ul>
+							</div>
+			            	<div class="table-info tab-content" id="myTabContent">
+			            		<div id="info1" class="tab-pane fade in active">
+			            			<h5>基本信息</h5>
 			            			<table class="table table-bordered table-striped">
 				            			<colgroup>
 											<col class="span2">
@@ -255,9 +264,10 @@
 											</tr>
 										</tbody>
 				            		</table>
-			            		</ul>
-			            		<h5>联系方式</h5>
-			            		<ul>
+				            		<div class="sub-table"><a class="btn btn-large btn-primary">修改资料</a></div>
+			            		</div>
+			            		<div id="info2" class="tab-pane fade">
+			            			<h5>联系方式</h5>
 			            			<table class="table table-bordered table-striped">
 				            			<colgroup>
 											<col class="span2">
@@ -298,9 +308,10 @@
 											</tr>
 										</tbody>
 				            		</table>
-			            		</ul>
-			            		<h5>支付方式</h5>
-			            		<ul>
+				            		<div class="sub-table"><a class="btn btn-large btn-primary">修改资料</a></div>
+			            		</div>
+			            		<div id="info3" class="tab-pane fade">
+			            			<h5>支付方式</h5>
 			            			<table class="table table-bordered table-striped">
 				            			<colgroup>
 											<col class="span2">
@@ -310,34 +321,34 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>付款方式</td>
+												<td> 银行卡 </td>
+												<td>银行账户名称 </td>
+												<td> 亿佳隆账号</td>
 											</tr>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>开户银行 </td>
+												<td></td>
+												<td>银行帐号</td>
+												<td></td>
 											</tr>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>委托收款方开户银行</td>
+												<td></td>
+												<td>Cl委托收款方帐号ass</td>
+												<td></td>
 											</tr>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>委托收款方名称 </td>
+												<td colspan="3"></td>
+												
 											</tr>
 										</tbody>
 				            		</table>
-			            		</ul>
-			            		<h5>经营信息</h5>
-			            		<ul>
+				            		<div class="sub-table"><a class="btn btn-large btn-primary">修改资料</a></div>
+			            		</div>
+			            		<div id="info4" class="tab-pane fade">
+			            			<h5>经营信息</h5>
 			            			<table class="table table-bordered table-striped">
 				            			<colgroup>
 											<col class="span2">
@@ -347,23 +358,35 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>经营范围</td>
+												<td></td>
+												<td>公司类型</td>
+												<td></td>
 											</tr>
 											<tr>
-												<td>Class</td>
-												<td>Description</td>
-												<td>Class</td>
-												<td>Description</td>
+												<td>合作方式 </td>
+												<td></td>
+												<td>注册资本(万元)</td>
+												<td> 500.00 </td>
+											</tr>
+											<tr>
+												<td>工商登记时间 </td>
+												<td></td>
+												<td>管理部门</td>
+												<td></td>
 											</tr>
 										</tbody>
 				            		</table>
-			            		</ul>
+			            			<div class="sub-table"><a class="btn btn-large btn-primary">修改资料</a></div>
+			            		</div>
 			            	</div>
 			            </div>
 			        </div>
+			        <script>
+						  $(function () {
+						    $('.tabs a:last').tab('show')
+						  })
+					</script>
 	       		</div><!--/span-->
 	      	</div><!--/row-->
 		</div>

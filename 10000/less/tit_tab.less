@@ -1,0 +1,43 @@
+.tit-tab{
+	padding-top: 7px;
+	height: 28px;
+	border-bottom: 5px solid #81BA21;
+	width: 720px;
+	position: relative;
+	background: transparent url(../img/nav_tit_tab.png) 0 0 no-repeat;
+	ul{
+	position: absolute;
+	width: 720px;	
+	}
+	li{
+		float: left;
+		padding-left: 22px;
+		position: relative;
+		cursor: pointer;
+		background:transparent url(../img/selser_tab_nav.gif) no-repeat 100% 0;
+		a{
+			line-height: 28px;
+			font-size: 12px;
+			color: #333;
+			font-weight: bold;
+			display: block;
+			padding-right: 22px;
+			text-decoration: none;
+		}
+		&.active{
+			background: url(../img/sprite_btn.gif) no-repeat 0 0;
+			height: 35px;
+			//padding-top:7px;
+			//line-height: 28px;
+			top: -7px;
+			a{
+				background: url(../img/sprite_btn.gif) no-repeat 100% 0;
+				color: white;
+				line-height: 40px;
+			}
+		}
+	}
+}
+.table_info{
+	overflow: auto;
+}
